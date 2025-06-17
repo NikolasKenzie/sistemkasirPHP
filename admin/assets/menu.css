@@ -1,0 +1,96 @@
+.menu-table-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .menu-table-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-table-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .menu-search {
+    text-align: right;
+    margin-bottom: 15px;
+  }
+  
+  #searchMenu {
+    padding: 8px 12px;
+    width: 250px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  .menu-action {
+    margin-bottom: 30px;
+    text-align: right;
+  }
+  
+  .btn-add {
+    background-color: #4CAF50;
+    color: red;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .container-button {
+    padding: 15px;
+    margin-bottom: 1.3rem;
+  }
+    
+  
+  
+  .menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  
+  .menu-table th,
+  .menu-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .menu-table th {
+    background-color: #2b2929;
+    color: #f5f5f5;
+  }
+  
+  .menu-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .btn-edit,
+  .btn-delete {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .btn-edit {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .btn-delete {
+    background-color: #e53935;
+    color: white;
+  }
+  

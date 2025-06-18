@@ -9,9 +9,7 @@ searchKeyword.addEventListener('keyup', function() {
     //cek kesiapan ajax
     xhr.onreadystatechange = function() {
         if(xhr.readyState == 4 && xhr.status == 200) {
-            containerTable.innerHTML = xhr.responseText;
-
-            
+            containerTable.innerHTML = xhr.responseText;  
         }
     }
 

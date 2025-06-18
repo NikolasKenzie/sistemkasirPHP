@@ -9,6 +9,7 @@ $totalTransaksi = $row['total'];
 
 $queryRiwayatTransaksi = query("SELECT * FROM riwayat_transaksi");
 
+
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +27,6 @@ $queryRiwayatTransaksi = query("SELECT * FROM riwayat_transaksi");
   <section class="dashboard-section">
     <div class="dashboard-container">
 
-      
       <div class="summary-boxes">
         <div class="summary-card">
           <i class="fas fa-receipt"></i>
@@ -40,9 +40,13 @@ $queryRiwayatTransaksi = query("SELECT * FROM riwayat_transaksi");
       <!-- Riwayat Transaksi -->
       <div class="transaction-history">
         <div class="transaction-header">
+
           <h2>Riwayat Transaksi</h2>
         </div>
-
+        <div class="search-bar">
+          <input type="text" placeholder="Cari ID Transaksi atau Nama Kasir..." id="inputSearch">
+          <button><i class="fas fa-search"></i></button>
+        </div>
         <div class="table-container">
           <table class="transaction-table">
             <thead>
@@ -55,14 +59,14 @@ $queryRiwayatTransaksi = query("SELECT * FROM riwayat_transaksi");
                 <th>Aksi</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="table-body">
               <?php foreach ($queryRiwayatTransaksi as $row) : ?>
                 <tr>
                   <!-- <td>1</td> -->
-                  <td><?=$row['id_transaksi']?></td>
-                  <td><?=$row['tanggal']?></td>
-                  <td><?=$row['nama_kasir']?></td>
-                  <td><?=$row['total_harga']?></td>
+                  <td><?= $row['id_transaksi'] ?></td>
+                  <td><?= $row['tanggal'] ?></td>
+                  <td><?= $row['nama_kasir'] ?></td>
+                  <td><?= $row['total_harga'] ?></td>
                   <td>
                     <a href="index.php?page=detailTransaksi&id=<?= $row['id_transaksi'] ?>">
                       <button class="btn-detail"> Cek Detail</button>
@@ -77,6 +81,7 @@ $queryRiwayatTransaksi = query("SELECT * FROM riwayat_transaksi");
 
     </div>
   </section>
+  <script src="sistem/js/searchRiwayatTransaksi.js"></script>
 </body>
 
 </html>

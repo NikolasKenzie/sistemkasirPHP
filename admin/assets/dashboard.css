@@ -95,3 +95,44 @@ body {
   .btn-detail:active {
     transform: scale(0.98);
   }
+  .search-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .search-bar input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 250px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+  }
+  
+  .search-bar button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-bar button:hover {
+    background-color: #2980b9;
+  }
+  
+  .search-bar button:active {
+    transform: scale(0.96);
+  }
+  

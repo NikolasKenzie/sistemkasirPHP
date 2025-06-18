@@ -2,6 +2,7 @@
 
 require_once "../config/database.php";
 require_once "../config/function.php";
+date_default_timezone_set('Asia/Jakarta');
 
 if (!isset($_SESSION['idTransaksi'])) {
     $id_transaksi = generateTransactionId();
@@ -29,6 +30,7 @@ if (isset($_POST['btn_cetakStruk'])) {
     $result1 = mysqli_query($conn, $query1);
 
     // insert ke table detail_transaksi BOMBARDIL) CROCODILO
+
     //NASGOR ENAK COK
     $isSuccess = true;
     foreach ($listMenu as $menu) {
@@ -50,9 +52,10 @@ if (isset($_POST['btn_cetakStruk'])) {
         unset($_SESSION['total_harga']);
         unset($_SESSION['idTransaksi']);
 
-        echo "<script>alert('Transaksi berhasil diproses')</script>";
-
-        header("Location: index.php?page=kasirPage");
+        echo "<script>
+            alert('Transaksi berhasil diproses');
+            window.location.href = 'index.php?page=kasirPage'
+        </script>";
     } else {
         echo "<script>alert('Transaksi gagal diproses')</script>";
     }

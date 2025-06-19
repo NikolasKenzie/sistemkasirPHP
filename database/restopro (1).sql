@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Jun 2025 pada 15.10
+-- Waktu pembuatan: 19 Jun 2025 pada 15.55
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -37,7 +37,8 @@ CREATE TABLE `akun_admin` (
 --
 
 INSERT INTO `akun_admin` (`username`, `password`) VALUES
-('herman', 'herman123');
+('herman', 'herman123'),
+('sarah', 'sarah123');
 
 -- --------------------------------------------------------
 
@@ -58,10 +59,20 @@ CREATE TABLE `detail_transaksi` (
 --
 
 INSERT INTO `detail_transaksi` (`id_detail`, `id_transaksi`, `nama_menu`, `qty`, `total`) VALUES
-(1, 'TRX202506178186B', 'Ayam Geprek', 1, 15000),
-(2, 'TRX202506178186B', 'Es Teh', 1, 5000),
-(3, 'TRX20250617AB86B', 'Ayam Geprek', 3, 45000),
-(4, 'TRX20250617AB86B', 'Es Teh', 3, 15000);
+(11, 'TRX202506182ADA2', 'Ayam Geprek', 3, 45000),
+(12, 'TRX202506182ADA2', 'Es Teh', 3, 15000),
+(13, 'TRX202506182ADA2', 'Bebek penyet', 1, 18000),
+(14, 'TRX202506182ADA2', 'Jus Jeruk', 1, 5000),
+(15, 'TRX202506184625C', 'Ayam Geprek', 3, 45000),
+(16, 'TRX202506184625C', 'Nasi Goreng', 1, 15000),
+(17, 'TRX202506184625C', 'Es Teh', 4, 20000),
+(18, 'TRX20250618CC33F', 'Ayam Geprek', 4, 60000),
+(19, 'TRX20250618CC33F', 'Nasi Goreng', 2, 30000),
+(20, 'TRX20250618CC33F', 'Bebek penyet', 2, 36000),
+(21, 'TRX20250618CC33F', 'Es Teh', 3, 15000),
+(22, 'TRX20250618CC33F', 'Teh Tarik', 3, 18000),
+(23, 'TRX202506182CE85', 'Ayam Geprek', 2, 30000),
+(24, 'TRX202506182CE85', 'Teh Tarik', 2, 12000);
 
 -- --------------------------------------------------------
 
@@ -87,7 +98,8 @@ INSERT INTO `list_menu` (`ID`, `nama_menu`, `kategori`, `harga`, `ketersediaan`)
 (3, 'Bebek penyet', 'makanan', 18000, 1),
 (4, 'Jus Jeruk', 'minuman', 5000, 1),
 (5, 'Nasi Goreng', 'makanan', 15000, 1),
-(6, 'Teh Tarik', 'minuman', 7000, 1);
+(7, 'Teh Tarik', 'minuman', 6000, 1),
+(8, 'capcai', 'makanan', 20000, 1);
 
 -- --------------------------------------------------------
 
@@ -108,8 +120,10 @@ CREATE TABLE `riwayat_transaksi` (
 --
 
 INSERT INTO `riwayat_transaksi` (`id_transaksi`, `tanggal`, `nama_kasir`, `total_harga`, `metode_pembayaran`) VALUES
-('TRX202506178186B', '2025-06-17 12:09:47', 'herman', 20000, 'CASH'),
-('TRX20250617AB86B', '2025-06-17 13:32:05', 'herman', 60000, 'CASH');
+('TRX202506182ADA2', '2025-06-18 12:34:00', 'herman', 83000, 'CASH'),
+('TRX202506182CE85', '2025-06-18 13:23:17', 'sarah', 42000, 'CASH'),
+('TRX202506184625C', '2025-06-18 13:13:28', 'herman', 80000, 'CASH'),
+('TRX20250618CC33F', '2025-06-18 13:20:31', 'sarah', 159000, 'CASH');
 
 -- --------------------------------------------------------
 
@@ -129,7 +143,8 @@ CREATE TABLE `ulasan_pelanggan` (
 
 INSERT INTO `ulasan_pelanggan` (`email`, `subjek`, `ulasan`) VALUES
 ('hendra123@gmail.com', 'Hendra', 'Makanan disini enak banget, sesuai sama harganya!\r\n'),
-('kevin321@gmail.com', 'Kevin', 'Tempatnya enak buat nongki bareng temen\r\n');
+('kevin321@gmail.com', 'Kevin', 'Tempatnya enak buat nongki bareng temen\r\n'),
+('angelica789@gmail.com', 'angelll', 'Tempatnya enak buat ngedate\r\n');
 
 --
 -- Indexes for dumped tables
@@ -162,13 +177,13 @@ ALTER TABLE `riwayat_transaksi`
 -- AUTO_INCREMENT untuk tabel `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
-  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT untuk tabel `list_menu`
 --
 ALTER TABLE `list_menu`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

@@ -15,6 +15,7 @@ $queruUlasan = query("SELECT * FROM ulasan_pelanggan");
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style/landingpagecopy.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
   <title>Nama Resto</title>
 </head>
 
@@ -22,14 +23,18 @@ $queruUlasan = query("SELECT * FROM ulasan_pelanggan");
 
   <header id="navbar">
     <div class="navbar-container">
-      <div class="logo">Nama Resto</div>
+      <div class="container-logo-user">
+        <h2>(Nama Resto)</h2>
+      </div>
       <nav class="nav-links">
         <a href="">Beranda</a>
         <a href="listmenu.php">Menu</a>
         <a href="">Lokasi</a>
         <a href="">About</a>
         <a href="">Kontak</a>
+        <i class="fa-solid fa-user"></i>  
       </nav>
+      
       <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     </div>
   </header>
@@ -89,8 +94,9 @@ $queruUlasan = query("SELECT * FROM ulasan_pelanggan");
             <h4><?=$ulasan['subjek']?></h4>
             <p><?=$ulasan['ulasan']?></p>
           </div>
+          <?php endforeach ?>
         </div>
-        <?php endforeach ?>
+        
         <form id="review-form" class="review-form" action="config/sendUlasan.php" method="POST">
           <h3>Tulis Ulasan mu</h3>
 

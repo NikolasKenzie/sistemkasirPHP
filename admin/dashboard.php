@@ -32,7 +32,7 @@ $queryRiwayatTransaksi = query("SELECT * FROM riwayat_transaksi");
           <i class="fas fa-receipt"></i>
           <div class="summary-info">
             <h3><?= $totalTransaksi ?></h3>
-            <p>Total Order Hari Ini</p>
+            <p>Total Order</p>
           </div>
         </div>
       </div>

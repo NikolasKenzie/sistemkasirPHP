@@ -12,8 +12,6 @@ $query = "SELECT * FROM riwayat_transaksi
                 metode_pembayaran LIKE '%$keyword%'
             ";
 $resultSuggest = query($query);
-
-
 ?>
 <tbody class="table-body">
     <?php foreach ($resultSuggest as $row) : ?>

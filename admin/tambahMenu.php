@@ -15,7 +15,7 @@ if(isset($_POST['btn-submit'])) {
         echo "
             <script>
                 alert('Menu berhasil ditambahkan!');
-                document.location.href = 'index.php?page=dashboard';
+                document.location.href = 'index.php?page=menupage;`
             </script>
         ";
     } else {
